@@ -12,7 +12,24 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const substrGen = (str) => {
     /* Only make changes below this comment */
+    let clean = str.replace(/\s+/g, '');
+    let set = clean.length
     
+    let result = [];
+
+    console.log(set)
+    for (let i = 0; i < set; i++) {
+        for (let j = 1; j <= set; j++) {
+            if (j <= i) {
+                continue
+            }
+            let sliced = clean.slice(i, j);
+            console.log(`i: ${i}, j:${j} = slice: ${sliced}`)
+            result.push(sliced);
+        }
+    }
+
+    return result;
     /* Only make changes below this comment */
 }
 
